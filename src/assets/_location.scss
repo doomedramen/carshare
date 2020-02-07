@@ -1,0 +1,20 @@
+.autocomplete .dropdown-menu {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .autocomplete .dropdown-content {
+    overflow: auto;
+    max-height: 200px;
+  }
+  
+  .autocomplete .dropdown-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    &:hover {
+      background-color: #ddd;
+      color: #0a0a0a;
+    }
+  }

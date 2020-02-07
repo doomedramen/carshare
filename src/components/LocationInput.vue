@@ -95,7 +95,7 @@ export default {
       this.isFetching = true;
       axios
         .get(
-          `http://nominatim.openstreetmap.org/search?format=json&q=${this.locationInput}`
+          `https://nominatim.openstreetmap.org/search?format=json&q=${this.locationInput}`
         )
         .then(({ data }) => {
           this.data = [];
@@ -118,26 +118,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.autocomplete .dropdown-menu {
-  display: block;
-  min-width: 100%;
-  max-width: 100%;
-}
-.autocomplete .dropdown-content {
-  overflow: auto;
-  max-height: 200px;
-}
-
-.autocomplete .dropdown-item {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  &:hover {
-    background-color: #ddd;
-    color: #0a0a0a;
-  }
-}
-</style>

@@ -1,0 +1,41 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #00e6b8;
+$primary-invert: findColorInvert($primary);
+
+$secondary: #2641d6;
+$secondary-invert: findColorInvert($secondary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "secondary": ($secondary, $secondary-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+//import bulma now that custom colors defined
+@import "~bulma";
+
+
+@import './_date';
+@import './time';
+@import './_location';
+.card {
+    &.is-rounded{
+    border-radius: 8px;
+    }
+}

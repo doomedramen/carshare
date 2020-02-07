@@ -1,0 +1,27 @@
+.timepicker {
+    .timepicker-footer {
+      padding: 0 0.5rem 0 0.5rem;
+    }
+    .control {
+      font-size: 1.25em;
+      margin-right: 0 !important;
+      .select {
+        select {
+          font-weight: $weight-semibold;
+          padding-right: $control-padding-horizontal;
+          border: 0;
+          option {
+            &:disabled {
+              color: rgba($grey, 0.7);
+            }
+          }
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &.is-colon {
+        font-size: 1.7em;
+      }
+    }
+  }

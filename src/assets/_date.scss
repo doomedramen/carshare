@@ -1,0 +1,70 @@
+$datepicker-width: 300px;
+$datepicker-bg: #fff;
+$datepicker-hover: #ddd;
+
+.datepicker {
+  position: absolute;
+  z-index: 99999;
+  text-align: left;
+  width: $datepicker-width;
+  background: bg;
+
+  header {
+    display: flex;
+    span {
+      display: block;
+      text-align: center;
+      width: (100% - (100% / 7) * 2);
+    }
+  }
+  .prev,
+  .next {
+    width: (100% / 7);
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background: $datepicker-hover;
+    }
+  }
+
+  .cell {
+    display: inline-block;
+    width: (100% / 7);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+
+    &:not(.is-blank) {
+      cursor: pointer;
+      &:hover {
+        background: $datepicker-hover;
+      }
+    }
+
+    &.is-today{
+      outline:1px solid $datepicker-hover;
+    }
+
+    &.is-selected{
+      background: $primary;
+    }
+  }
+
+  .prev {
+    &:after {
+      content: "<";
+    }
+  }
+
+  .next {
+    &:after {
+      content: ">";
+    }
+  }
+  .day-name {
+    font-size: 75%;
+    white-space: nowrap;
+  }
+}
